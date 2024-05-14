@@ -30,7 +30,7 @@ const routes = [
         component:ProfileComponent
     },
     {
-        name:'NotFound',
+        name:'PageNotFound',
         path:'/:pathMatch(.*)*',
         component:PageNotFound
     }

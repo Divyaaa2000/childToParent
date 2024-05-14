@@ -14,9 +14,22 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 export default {
   name: 'App',
+  data()
+  {
+    return{
+      list:[]
+      
+    }
+  },
+  async mounted()
+  {
+    let result=await axios.get(" https://reqres.in/api/users?page=1")
+    console.warn("api data",result.data.data);
+    this.list=result.data.data;
+  }
   
 }
 </script>
